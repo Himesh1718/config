@@ -1,6 +1,6 @@
 require("hc.plugins")
 require("flutter-tools")
-require('colorbuddy').colorscheme('gruvbuddy')
+-- require('colorbuddy').colorscheme('gruvbuddy')
 require('winbar').setup({
     enabled = true,
 
@@ -87,7 +87,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme onedark]]
+-- vim.cmd [[colorscheme rose-pine]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -123,7 +123,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'onedark',
+    theme = 'rose-pine',
     component_separators = '|',
     section_separators = '',
   },
@@ -409,4 +409,6 @@ vim.keymap.set('n','<leader>q', '<cmd>bdelete<cr>',{})
 
 vim.opt.listchars = {eol = '↵'}
 vim.opt.list = true
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normalfloat", { bg = "none" })
 -- vim: ts=2 sts=2 sw=2 et

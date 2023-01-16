@@ -26,6 +26,8 @@ require('packer').startup(function(use)
       'jiangmiao/auto-pairs',
       -- 'rafi/awesome-vim-colorschemes',
       'p00f/cphelper.nvim',
+      'prettier/vim-prettier',
+      'rafi/awesome-vim-colorschemes'
     },
   }
 
@@ -33,6 +35,16 @@ require('packer').startup(function(use)
     'akinsho/flutter-tools.nvim',
     requires = 'nvim-lua/plenary.nvim'
   }
+
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
+	  config = function()
+		  vim.cmd('colorscheme rose-pine')
+      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+      vim.api.nvim_set_hl(0, "Normalfloat", { bg = "none" })
+	  end
+  })
 
   use {
     'fgheng/winbar.nvim',

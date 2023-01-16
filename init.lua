@@ -87,7 +87,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
--- vim.cmd [[colorscheme rose-pine]]
+vim.cmd [[colorscheme gruvbox]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -123,7 +123,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'rose-pine',
+    theme = 'gruvbox',
     component_separators = '|',
     section_separators = '',
   },
@@ -411,4 +411,7 @@ vim.opt.listchars = {eol = '↵'}
 vim.opt.list = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "Normalfloat", { bg = "none" })
+vim.api.nvim_set_hl(0, 'LineNr', { fg = "#03f0fc"} )
+-- vim.api.nvim_set_hl(0, 'CurrentLineNr', { bg = "#fc030b"} )
+-- vim.api.nvim_set_hl(0, 'LineNr', { bg = "#000000"} )
 -- vim: ts=2 sts=2 sw=2 et

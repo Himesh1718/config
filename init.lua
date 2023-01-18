@@ -123,7 +123,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
+    theme = 'dracula',
     component_separators = '|',
     section_separators = '',
   },
@@ -412,6 +412,5 @@ vim.opt.list = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "Normalfloat", { bg = "none" })
 vim.api.nvim_set_hl(0, 'LineNr', { fg = "#03f0fc"} )
--- vim.api.nvim_set_hl(0, 'CurrentLineNr', { bg = "#fc030b"} )
--- vim.api.nvim_set_hl(0, 'LineNr', { bg = "#000000"} )
+vim.api.nvim_set_hl(0, 'IntenseLineNr', { fg = '#ffffff'})
 -- vim: ts=2 sts=2 sw=2 et

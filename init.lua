@@ -1,6 +1,5 @@
 require("hc.plugins")
-require("flutter-tools")
--- require('colorbuddy').colorscheme('gruvbuddy')
+require("hc.keymap")
 require('winbar').setup({
     enabled = true,
 
@@ -67,6 +66,7 @@ vim.o.hlsearch = false
 -- Make line numbers default
 vim.wo.number = true
 vim.o.relativenumber = true
+vim.opt.scrolloff = 8
 
 -- Enable mouse mode
 vim.o.mouse = 'a'
@@ -91,21 +91,6 @@ vim.cmd [[colorscheme gruvbox]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
-
--- [[ Basic Keymaps ]]
--- Set <space> as the leader key
--- See `:help mapleader`
---  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
--- Keymaps for better default experience
--- See `:help vim.keymap.set()`
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
--- Remap for dealing with word wrap
-vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -411,6 +396,6 @@ vim.opt.listchars = {eol = '↵'}
 vim.opt.list = true
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "Normalfloat", { bg = "none" })
-vim.api.nvim_set_hl(0, 'LineNr', { fg = "#03f0fc"} )
-vim.api.nvim_set_hl(0, 'IntenseLineNr', { fg = '#ffffff'})
+-- vim.api.nvim_set_hl(0, 'LineNr', { fg = "#03f0fc"} )
+-- vim.api.nvim_set_hl(0, 'IntenseLineNr', { fg = '#ffffff'})
 -- vim: ts=2 sts=2 sw=2 et
